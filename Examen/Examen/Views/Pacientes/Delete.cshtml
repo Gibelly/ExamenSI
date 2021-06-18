@@ -1,0 +1,198 @@
+﻿
+@model Examen.Models.Paciente
+
+@{
+    ViewData["Title"] = "Borrar Paciente";
+}
+<h1>Borrar</h1>
+<h3>¿Esta seguro de eliminar este registro?</h3>
+
+<hr />
+<div class="row">
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Nombres y Apellidos del Paciente</h5>
+            </div>
+            <div class="col-2">
+                <p><strong>@Html.DisplayFor(model => model.PacienteNombre)</strong></p>
+                <br />
+                <label asp-for="PacienteNombre" for="floatingInput"> </label>
+
+
+            </div>
+            <div class="col-2">
+
+                <p><strong>@Html.DisplayFor(model => model.PacienteNombre2)</strong></p>
+                <br />
+                <label asp-for="PacienteNombre2" for="floatingInput"> </label>
+
+
+            </div>
+            <div class="col-3">
+                <p><strong>@Html.DisplayFor(model => model.PacienteApellido)</strong></p>
+                <br />
+                <label asp-for="PacienteApellido" for="floatingInput"> </label>
+
+            </div>
+
+        </div>
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Correo Electrónico</h5>
+            </div>
+
+            <div class="col-3">
+                <p><strong>@Html.DisplayFor(model => model.PacienteCorreo)</strong></p>
+                <br />
+                <label asp-for="PacienteCorreo" for="floatingInput"> </label>
+
+            </div>
+
+        </div>
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Nombre del Acompañante</h5>
+            </div>
+
+            <div class="col-3">
+                <p><strong>@Html.DisplayFor(model => model.AcompNombre)</strong></p>
+                <br />
+                <label asp-for="AcompNombre" for="floatingInput"> </label>
+
+
+            </div>
+            <div class="col-3">
+                <p><strong>@Html.DisplayFor(model => model.AcompApellido)</strong></p>
+                <br />
+                <label asp-for="AcompApellido" for="floatingInput"> </label>
+
+            </div>
+        </div>
+
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Dirección</h5>
+            </div>
+
+            <div class="col-6">
+                <p><strong>@Html.DisplayFor(model => model.PacienteDireccionCalle)</strong></p>
+                <br />
+                <label asp-for="PacienteDireccionCalle" for="floatingInput"> </label>
+
+                <br /> <br />
+                <p><strong>@Html.DisplayFor(model => model.PacienteDireccionCalle2)</strong></p>
+                <br />
+                <label asp-for="PacienteDireccionCalle2" for="floatingInput"> </label>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <br /> <br />
+                <p><strong>@Html.DisplayFor(model => model.PacienteCiudad)</strong></p>
+                <br />
+                <label asp-for="PacienteCiudad" for="floatingInput"> </label>
+
+            </div>
+
+            <div class="col-3">
+                <br /> <br />
+                <p><strong>@Html.DisplayFor(model => model.PacienteProvincia)</strong></p>
+                <br />
+                <label asp-for="PacienteProvincia" for="floatingInput"> </label>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <br /> <br />
+                <p><strong>@Html.DisplayFor(model => model.PacienteCodPostal)</strong></p>
+                <br />
+                <label asp-for="PacienteCodPostal" for="floatingInput"> </label>
+
+            </div>
+
+        </div>
+
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Número de teléfono</h5>
+            </div>
+
+            <div class="col-2">
+                <p><strong>@Html.DisplayFor(model => model.PacienteCodArea)</strong></p>
+                <br />
+                <label asp-for="PacienteCodArea" for="floatingInput"> </label>
+
+
+            </div>
+            <p>-</p>
+            <div class="col-4">
+                <p><strong>@Html.DisplayFor(model => model.PacienteTelefono)</strong></p>
+                <br />
+                <label asp-for="PacienteTelefono" for="floatingInput"> </label>
+
+            </div>
+        </div>
+
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-3">
+                <h5>Número de Whatsapp</h5>
+            </div>
+
+            <div class="col-2">
+                <p><strong>@Html.DisplayFor(model => model.PacienteCodArea2)</strong></p>
+                <br />
+                <label asp-for="PacienteCodArea2" for="floatingInput"> </label>
+
+
+            </div>
+            <p>-</p>
+            <div class="col-4">
+                <p><strong>@Html.DisplayFor(model => model.PacienteWhatsapp)</strong></p>
+                <br />
+                <label asp-for="PacienteWhatsapp" for="floatingInput"> </label>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PacienteId" />
+        <input type="submit" class="btn btn-danger" value="Borrar" />
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+    </form>
+
+
+</div>

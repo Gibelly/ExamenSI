@@ -1,0 +1,181 @@
+﻿@model Examen.Models.Paciente
+
+@{
+    ViewData["Title"] = "Editar Paciente";
+}
+
+<h2>Datos del Paciente</h2>
+<hr />
+<div class="row">
+
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="PacienteId" />
+        <div class="container">
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Nombres y Apellidos del Paciente</h5>
+                </div>
+                <div class="col-2">
+                    <input asp-for="PacienteNombre" class="form-control" />
+                    <label asp-for="PacienteNombre" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteNombre" class="text-danger"></span>
+
+                </div>
+                <div class="col-2">
+
+                    <input asp-for="PacienteNombre2" class="form-control" />
+                    <label asp-for="PacienteNombre2" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteNombre2" class="text-danger"></span>
+
+
+                </div>
+                <div class="col-3">
+                    <input asp-for="PacienteApellido" class="form-control" />
+                    <label asp-for="PacienteApellido" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteApellido" class="text-danger"></span>
+                </div>
+
+            </div>
+            <br /> <br />
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Correo Electrónico</h5>
+                </div>
+
+                <div class="col-3">
+                    <input asp-for="PacienteCorreo" class="form-control" />
+                    <label asp-for="PacienteCorreo" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteCorreo" class="text-danger"></span>
+                </div>
+
+            </div>
+            <br /> <br />
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Nombre del Acompañante</h5>
+                </div>
+
+                <div class="col-3">
+                    <input asp-for="AcompNombre" class="form-control" />
+                    <label asp-for="AcompNombre" for="floatingInput"> </label>
+
+
+                </div>
+                <div class="col-3">
+                    <input asp-for="AcompApellido" class="form-control" />
+                    <label asp-for="AcompApellido" for="floatingInput"> </label>
+
+                </div>
+            </div>
+
+            <br /> <br />
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Dirección</h5>
+                </div>
+
+                <div class="col-6">
+                    <input asp-for="PacienteDireccionCalle" class="form-control" />
+                    <label asp-for="PacienteDireccionCalle" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteDireccionCalle" class="text-danger"></span>
+
+                    <input asp-for="PacienteDireccionCalle2" class="form-control" />
+                    <label asp-for="PacienteDireccionCalle2" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteDireccionCalle2" class="text-danger"></span>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-3">
+                    <input asp-for="PacienteCiudad" class="form-control" />
+                    <label asp-for="PacienteCiudad" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteCiudad" class="text-danger"></span>
+                </div>
+                <div class="col-3">
+                    <input asp-for="PacienteProvincia" class="form-control" />
+                    <label asp-for="PacienteProvincia" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteProvincia" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+
+                </div>
+                <div class="col-3">
+                    <input asp-for="PacienteCodPostal" class="form-control" />
+                    <label asp-for="PacienteCodPostal" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteCodPostal" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <br /> <br />
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Número de teléfono</h5>
+                </div>
+
+                <div class="col-2">
+                    <input asp-for="PacienteCodArea" class="form-control" />
+                    <label asp-for="PacienteCodArea" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteCodArea" class="text-danger"></span>
+
+                </div>
+                <p>-</p>
+                <div class="col-4">
+                    <input asp-for="PacienteTelefono" class="form-control" />
+                    <label asp-for="PacienteTelefono" for="floatingInput"> </label>
+                    <span asp-validation-for="PacienteTelefono" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br /> <br />
+            <div class="row">
+
+                <div class="col-3">
+                    <h5>Número de Whatsapp</h5>
+                </div>
+
+                <div class="col-2">
+                    <input asp-for="PacienteCodArea2" class="form-control" />
+                    <label asp-for="PacienteCodArea2" for="floatingInput"> </label>
+
+
+                </div>
+                <p>-</p>
+                <div class="col-4">
+                    <input asp-for="PacienteWhatsapp" class="form-control" />
+                    <label asp-for="PacienteWhatsapp" for="floatingInput"> </label>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-warning">Regresar</a>
+        </div>
+    </form>
+
+
+
+</div>
+
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
